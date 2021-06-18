@@ -1,17 +1,17 @@
 import 'package:firebase_coffee_app/services/auth.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({Key? key}) : super(key: key);
+class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
+class _RegisterState extends State<Register> {
+
   final AuthService _auth = AuthService();
 
-  //text field state
   String email = "";
   String password = "";
 
@@ -21,7 +21,7 @@ class _SignInState extends State<SignIn> {
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
-        title: Text('Sign in to Brew Crew'),
+        title: Text('Sign up to Brew Crew'),
         elevation: 0.0,
       ),
       body: Container(
@@ -55,7 +55,7 @@ class _SignInState extends State<SignIn> {
             ElevatedButton(
               style: ElevatedButton.styleFrom(primary: Colors.pink[400]),
               child: Text(
-                'Sign in',
+                'Register',
                 style: TextStyle(color: Colors.white),
               ),
               onPressed: () async {
