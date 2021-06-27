@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_coffee_app/models/brew.dart';
+import 'package:firebase_coffee_app/screens/home/settings_form.dart';
 import 'package:firebase_coffee_app/services/auth.dart';
 import 'package:firebase_coffee_app/services/database.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,7 +20,7 @@ class Home extends StatelessWidget {
           builder: (context) {
             return Container(
               padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
-              child: Text("Bottom Sheet"),
+              child: SettingsForm(),
             );
           });
     }
