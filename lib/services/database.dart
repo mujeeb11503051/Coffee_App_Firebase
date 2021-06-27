@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DatabaseService {
-  final String uid;
-  DatabaseService({required this.uid});
+  final String? uid;
+  DatabaseService({this.uid});
 
   //collection reference
   final CollectionReference brewCollection =
@@ -13,4 +13,11 @@ class DatabaseService {
         .doc(uid)
         .set({'sugars': sugars, 'name': name, 'strength': strength});
   }
+
+  // get brew streams
+  Stream<QuerySnapshot> get brews{
+    return brewCollection.snapshots();
+
+  }
+
 }
