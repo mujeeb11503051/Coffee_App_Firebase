@@ -1,6 +1,6 @@
 class Userr {
-  final String uid;
+  final String? uid;
 
-  Userr({required this.uid});
+  Userr({this.uid});
 
 }

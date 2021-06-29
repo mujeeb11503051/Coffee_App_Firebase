@@ -31,9 +31,9 @@ class DatabaseService {
   UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
     return UserData(
         uid: uid,
-        name: (snapshot.data() as DocumentSnapshot)['name'],
-        sugars: (snapshot.data() as DocumentSnapshot)['sugars'],
-        strength: (snapshot.data() as DocumentSnapshot)['strength'],
+        name: snapshot['name'],
+        sugars: snapshot['sugars'],
+        strength: snapshot['strength']
     );
   }
 
